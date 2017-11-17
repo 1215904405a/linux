@@ -1,0 +1,13 @@
+rm -rf /data/node //删除文件夹(-r递归 )
+rm -f /data/node.js //删除文件
+exit 退出
+ls -al 显示所有文件（包括隐藏）
+
+1.升级NODE
+//下载
+wget https://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-x64.tar.xz 
+//解压
+tar xf node-v8.9.1-linux-x64.tar.xz 
+//node 安装的位置（当前可用）
+which node 
+mv /root/node-v8.9.1-linux-x64 ./node //剪切文件到某个位置
