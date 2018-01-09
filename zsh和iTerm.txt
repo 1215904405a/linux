@@ -1,0 +1,17 @@
+echo $SHELL 当前使用shell
+shell ：cat /etc/shells
+
+切换shell
+chsh -s /bin/bash
+chsh -s /bin/zsh
+zsh配置环境变量：
+~/.zshrc
+
+command  d  定住一块区域 
+
+http://www.iterm2.com/
+iTerm
+cmd + n : 新建窗口
+cmd + t : 新建TAB
+cmd + d : 垂直新建TAB
+cmd + shift + d : 水平新建TAB
