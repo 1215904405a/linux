@@ -15,3 +15,31 @@ cmd + n : 新建窗口
 cmd + t : 新建TAB
 cmd + d : 垂直新建TAB
 cmd + shift + d : 水平新建TAB
+
+
+Zsh 快捷键绑定 (keybinding):
+http://mindonmind.github.io/notes/linux/zsh_bindkeys.html
+快捷键¶
+功能	快捷键
+向前移动	ctrl-f/right
+向后移动	ctrl-b/left
+按单词向前移动	esc-f/ctrl-right
+按单词向后移动	esc-b/ctrl-left
+删除上一个单词	ctrl-w
+清屏	ctrl-l
+撤销	ctrl-_/ctrl-/
+上一行最后一个参数	esc-./!$
+将本行加引号	alt-‘
+查询命令	alt-shift-?
+剪切光标前内容	ctrl-u
+剪切光标后内容	ctrl-k
+粘贴剪切的内容	ctrl-y
+反向搜索	ctrl-r
+正向搜索	ctrl-s
+
+# 前后移动一个单词
+bindkey '^[^[[C' emacs-forward-word  # Alt-Right
+bindkey '^[^[[D' emacs-backward-word # Alt-Left
+# or
+bindkey '^[Oc' emacs-forward-word    # Ctrl-Right
+bindkey '^[Od' emacs-backward-word   # Ctrl-Left
