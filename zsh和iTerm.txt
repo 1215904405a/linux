@@ -1,3 +1,5 @@
+参考：https://wiki.archlinux.org/index.php/Zsh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E9.85.8D.E7.BD.AE_.24PATH
+
 echo $SHELL 当前使用shell
 shell ：cat /etc/shells
 
