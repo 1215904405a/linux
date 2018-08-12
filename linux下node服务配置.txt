@@ -16,6 +16,8 @@ sed -n '5,10p' /etc/passwd
 这样你就可以只查看文件的第5行到第10行。
 下载：wget url
 
+(4) sudo chown -R yong /data/logs 给指定用户和目录加管理员权限
+
 配环境变量
 (1)vim /etc/profile //配置path(node安装位置路径)
 source /etc/profile //使配置生效
