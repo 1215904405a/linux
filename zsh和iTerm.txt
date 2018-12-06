@@ -54,7 +54,7 @@ bindkey '^[Od' emacs-backward-word   # Ctrl-Left
 
 
 
-
+具体文件配置：
 ./
 ../
 .CFUserTextEncoding
