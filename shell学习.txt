@@ -2,3 +2,7 @@
 学习到第三章
 
 https://github.com/qinjx/30min_guides/blob/master/shell.md
+
+
+chmod 755 hello  (u自己读写执行，其他人执行)
+https://www.runoob.com/linux/linux-comm-chmod.html
