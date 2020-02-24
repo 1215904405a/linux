@@ -1,0 +1,55 @@
+user  root staff;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen       80;
+        server_name ml.prod.com;
+        #access_log    /var/log/nginx/access.log;
+        #error_log     /var/log/nginx/error.log;
+        autoindex on;
+        add_header Access-Control-Allow-Origin '*';
+        location /tz/ {
+            alias /Users/yong/project/ningbo/features_front/dist/;
+#            index index.html;
+        }
+    }
+
+    server {
+      listen  80;
+      server_name  ml.dev.com;
+      add_header Access-Control-Allow-origin *;
+      add_header Access-Control-Allow-Methods 'GET, POST';
+      location / {
+        proxy_pass http://127.0.0.1:9000;
+      }
+    }
+
+    server {
+        listen       80;
+        server_name mc.dev.com;
+        #access_log    /var/log/nginx/access.log;
+        #error_log     /var/log/nginx/error.log;
+        autoindex on;
+        add_header Access-Control-Allow-Origin '*';
+        # hippo目录代理到线上接口
+        location /hippo/ {
+            #rewrite /hippo/* break;
+            proxy_pass http://hippo.demo.mlamp.cn;
+        }
+        # 本地静态资源
+        location / {
+            alias /Users/yong/project/HIPPO-WEB-v1.7.0.1/build/;
+            index index.html;
+        }
+    }
+}
