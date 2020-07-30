@@ -1,25 +1,47 @@
 rm -rf /data/node //删除文件夹(-r递归 )
+
 rm -f /data/node.js //删除文件
+
 exit 退出
+
 ls -al 显示所有文件（包括隐藏）
+
 export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+
 echo $PATH //echo命令, 在shell编程中极为常用, 在终端下打印变量value
+
 tail -f 2017-11-16.log //
+
+源文件夹重命名：mv ./dist ./dist2
+
+复制：cp ./dist/* ./dist2
+
 (1) 如果你只想看文件的前5行，可以使用head命令，如： 
+
 head -5 /etc/passwd 
-(2) 如果你想查看文件的后10行，可以使用tail命令，如： 
+
+(2) 如果你想查看文件的后10行，可以使用tail命令，如：
+
 tail -10 /etc/passwd 或 tail -n 10 /etc/passwd 
+
 tail -f /var/log/messages 
+
 参数-f使tail不停地去读最新的内容，这样有实时监视的效果 用Ctrl＋c来终止！ 
+
 (3) 查看文件中间一段，你可以使用sed命令，如： 
+
 sed -n '5,10p' /etc/passwd 
+
 这样你就可以只查看文件的第5行到第10行。
+
 下载：wget url
 
 (4) sudo chown -R yong /data/logs 给指定用户和目录加管理员权限
 
 配环境变量
+
 (1)vim /etc/profile //配置path(node安装位置路径)
+
 source /etc/profile //使配置生效
 
 (2)软链接
@@ -30,6 +52,7 @@ source /etc/profile //使配置生效
 
 
 chmod是Linux下设置文件权限的命令，后面的数字表示不同用户或用户组的权限。
+
 一般是三个数字：
 第一个数字表示文件所有者的权限
 第二个数字表示与文件所有者同属一个用户组的其他用户的权限
