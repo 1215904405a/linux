@@ -18,11 +18,15 @@ http {
         #error_log     /var/log/nginx/error.log;
         autoindex on;
         add_header Access-Control-Allow-Origin 'qdingnet.com';
-        location /public/ {
-            alias /Users/yong/qd/front/public/;
-            index index.html;
-        }
         location /polymer/ {
+             ## 启动 Content-Encoding: gzip  
+             gzip on; 
+             gzip_buffers 32 4K;
+             gzip_comp_level 6;
+             gzip_min_length 100;
+             gzip_types application/javascript text/css text/xml;
+             gzip_disable "MSIE [1-6]\.";
+             gzip_vary on;
              alias /Users/yong/qd/front/polymer/;
              index index.client.html index.html;
         }
